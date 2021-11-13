@@ -1,0 +1,178 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand','Noto Sans TC', cursive;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+header{
+    background-color: #B93737;
+    display: flex;
+    box-shadow: 3px 3px 15px 0.3px ;
+    align-items: center;
+    flex-wrap: wrap;
+    div.title{
+        h1{
+            font-size: 3rem;
+            flex: 5 1 400px;
+            margin-left: 2rem;
+            margin-right: 200px;
+            animation: light 0.2s 1s 9 alternate both;
+        }
+        @keyframes light {
+            form{
+                color: black;
+            }
+            to{
+                color: white;
+            }
+        }
+    }
+    nav{
+        flex: 2 1 400px;
+        
+        ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            align-items: center;
+            li{
+                a{
+                    color: white;
+                    font-size: 2.5rem;
+                    text-decoration: none;
+                    img{
+                        width: 4vw;
+                        height: 4vw;
+                    }
+                }
+                a:hover{
+                    color: green;
+                }
+                
+            }
+        }
+    }
+}
+
+main{
+    section.backImage{
+        min-height: 90vh;
+        width: 100%;
+        background-image: url(../聖誕背景.jpg);
+        background-size: cover;
+        background-position: center;
+        
+        display: flex;
+
+        h2{
+            font-size: 3.5rem;
+            color: white;
+            
+            text-align: center;
+            margin-left: 50vw;
+            margin-top: 20vh
+        }
+    }
+}
+
+footer{
+    background-color: #B93737;
+    h3{
+        font-size: 2rem;
+        padding: 1.5rem;
+        text-align: center;
+        color: white;
+    }
+    section.pictures{
+        div.footerpic{
+            display: flex;
+            justify-content: space-around;
+            img{
+                width: 20vw;
+                height: 15vw;
+                border-radius: 30%;
+                transition: all 0.2s;
+                margin: 1.5rem;
+                box-shadow: 3px 3px 15px 0.5px ;
+            }
+            img:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1400px){
+    main{
+        section.backImage{
+            background-size: cover;
+            min-height: 73vh;
+        }
+    }
+}
+
+@media screen and(max-width:770px){
+    header{
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: 5vw;
+                        img{
+                            width: 6vw;
+                            height: 6vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:576px){
+    header{
+        div.title{
+            h1{
+                font-size: 2rem;
+                margin-right: 0px;
+            }
+        }
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        section.backImage{
+            min-height: 60vh;
+            h2{
+                font-size: 2rem;
+                
+            }
+        }
+    }
+    footer{
+        h3{
+            font-size: 1.5rem;
+        }
+        section.pictures{
+            div.footerpic{
+                img{
+                    width: 25vw;
+                    height: 21vw;
+                    margin: 0.8rem;
+                }
+            }
+        }
+    }
+}

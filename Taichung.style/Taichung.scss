@@ -1,0 +1,270 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Patrick Hand", "Noto Sans TC", cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  background-color: #b93737;
+  display: flex;
+  box-shadow: 3px 3px 15px 0.3px;
+  align-items: center;
+  flex-wrap: wrap;
+  div.title {
+    h1 {
+      font-size: 2.5rem;
+      flex: 8 1 400px;
+      margin-left: 2rem;
+      margin-right: 20vw;
+      animation: light 0.2s 1s 9 alternate both;
+    }
+    @keyframes light {
+      form {
+        color: black;
+      }
+      to {
+        color: white;
+      }
+    }
+  }
+  nav {
+    flex: 2 1 400px;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-end;
+      align-items: center;
+      li {
+        margin-right: 5rem;
+        a {
+          color: white;
+          font-size: 2.5rem;
+          text-decoration: none;
+          margin-right: 0.5rem;
+          img {
+            width: 3.5vw;
+            height: 3.5vw;
+            margin-top: 0.5rem;
+          }
+        }
+        a:hover {
+          color: green;
+        }
+      }
+    }
+  }
+}
+
+main {
+  section.backImage {
+    min-height: 89vh;
+    width: 100%;
+    background-image: url(../台中照片1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    div.pic {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 0 2vw #d3cb58;
+        transition: all 0.2s;
+      }
+      img:hover{
+        transform: scale(1.2);
+      }
+      img.first {
+        top: 2vw;
+        left: 2vw;
+      }
+      img.second {
+        top: 1.5vw;
+        left: 12vw;
+      }
+      img.third {
+        top: 1.5vw;
+        left: 2vw;
+      }
+    }
+    div.text {
+      position: absolute;
+      top: 3vw;
+      left: 25vw;
+      h1 {
+        font-size: 4rem;
+        color: green;
+      }
+      ul {
+        li {
+          list-style-type: none;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    div.gift {
+      width: 15vw;
+      height: 15vw;
+      position: relative;
+      top: 25vw;
+      left: 5vw;
+      animation: cross 2s ease-in 1s 6 alternate both;
+      transition: left 2s;
+      img {
+        width: 15vw;
+      }
+    }
+    @keyframes cross {
+      from {
+        left: 5vw;
+      }
+      to {
+        left: 45vw;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1200px){
+  header{
+    div.title{
+      h1{
+        font-size: 2.4rem;
+      }
+    }
+  }
+  main{
+    section.backImage{
+      div.pic{
+        img{
+          margin-top: 3vw;
+        }
+        img.second{
+          left: 2vw;
+        }
+      }
+      div.text{
+        left: 16vw;
+        h1{
+          font-size: 3.5rem;
+        }
+        ul{
+          li{
+            font-size: 1.5rem;
+          }
+        }
+      }
+      div.gift{
+          top: 30vw;
+          img{
+            width: 20vw;
+          }
+      }
+    }
+  }
+}
+@media screen and(max-width:990px){
+  header{
+    nav{
+      ul{
+        justify-content: flex-start;
+        li{
+          a{
+            img{
+              width: 6vw;
+              height: 6vw;
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main{
+    position: static;
+    z-index: 10;
+    section.backImage{
+      flex-direction: column-reverse;
+      background-position: -450px ;
+      div.pic{
+        flex-direction: row;
+        position: relative;
+        bottom: 60vw;
+        img{
+          margin: 1rem;
+          width: 15vw;
+          height: 15vw;
+        }
+      }
+      div.text{
+        left:2vw;
+      }
+      div.gift{
+         top: -15vw;
+      }
+    }
+  }  
+}
+
+@media screen and(max-width:576px){
+  header{
+    nav{
+      ul{
+        li{
+          margin-right:1rem;
+          a{
+            font-size: 2rem;
+            img{
+              width: 10vw;
+              height: 10vw;
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main{
+    section.backImage{
+      background-image: none;
+      div.pic{
+        top: -40vh;
+        img{
+          margin: 0px 30px;
+        }
+      }
+      div.text{
+        h1{
+          font-size: 2.5rem;
+          margin-top: 1rem;
+        }
+        ul{
+          li{
+            font-size: 1.2rem;
+          }
+        }
+      }
+      div.gift{
+          top: -20vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Patrick Hand','Noto Sans TC', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  background-color: #B93737;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 3px 3px 15px 0.3px;
+          box-shadow: 3px 3px 15px 0.3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header div.title h1 {
+  font-size: 3rem;
+  -webkit-box-flex: 5;
+      -ms-flex: 5 1 400px;
+          flex: 5 1 400px;
+  margin-left: 2rem;
+  margin-right: 200px;
+  -webkit-animation: light 0.2s 1s 9 alternate both;
+          animation: light 0.2s 1s 9 alternate both;
+}
+
+@-webkit-keyframes light {
+  form {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes light {
+  form {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+header nav {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 400px;
+          flex: 2 1 400px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li a {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+
+header nav ul li a img {
+  width: 4vw;
+  height: 4vw;
+}
+
+header nav ul li a:hover {
+  color: green;
+}
+
+main section.backImage {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url(../聖誕背景.jpg);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section.backImage h2 {
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  margin-left: 50vw;
+  margin-top: 20vh;
+}
+
+footer {
+  background-color: #B93737;
+}
+
+footer h3 {
+  font-size: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+footer section.pictures div.footerpic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer section.pictures div.footerpic img {
+  width: 20vw;
+  height: 15vw;
+  border-radius: 30%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 1.5rem;
+  -webkit-box-shadow: 3px 3px 15px 0.5px;
+          box-shadow: 3px 3px 15px 0.5px;
+}
+
+footer section.pictures div.footerpic img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 1400px) {
+  main section.backImage {
+    background-size: cover;
+    min-height: 73vh;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  header nav ul li a {
+    font-size: 5vw;
+  }
+  header nav ul li a img {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header div.title h1 {
+    font-size: 2rem;
+    margin-right: 0px;
+  }
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+  main section.backImage {
+    min-height: 60vh;
+  }
+  main section.backImage h2 {
+    font-size: 2rem;
+  }
+  footer h3 {
+    font-size: 1.5rem;
+  }
+  footer section.pictures div.footerpic img {
+    width: 25vw;
+    height: 21vw;
+    margin: 0.8rem;
+  }
+}
+/*# sourceMappingURL=first.css.map */
